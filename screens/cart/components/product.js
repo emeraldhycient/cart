@@ -14,6 +14,7 @@ const Product = () => {
         <Image
           source={require("../../../assets/images/shoe2.png")}
           style={styles.product}
+          resizeMode="cover"
         />
       </View>
     </TouchableOpacity>

@@ -1,30 +1,38 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React from "react";
 import AntDesign from "react-native-vector-icons/AntDesign";
 
 const Header = () => {
   return (
     <View style={styles.header}>
-      <AntDesign name="arrowleft" size={25} color="#191b1c" />
+      <TouchableOpacity>
+        <AntDesign name="arrowleft" size={25} color="#191b1c" />
+      </TouchableOpacity>
       <View style={styles.cart_holder}>
-        <AntDesign
-          name="search1"
-          size={22}
-          color="#191b1c"
-          style={styles.icon}
-        />
-        <AntDesign
-          name="shoppingcart"
-          size={22}
-          color="#191b1c"
-          style={styles.icon}
-        />
-        <AntDesign
-          name="sharealt"
-          size={22}
-          color="#191b1c"
-          style={styles.icon}
-        />
+        <TouchableOpacity>
+          <AntDesign
+            name="search1"
+            size={22}
+            color="#191b1c"
+            style={styles.icon}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <AntDesign
+            name="shoppingcart"
+            size={22}
+            color="#191b1c"
+            style={styles.icon}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <AntDesign
+            name="sharealt"
+            size={22}
+            color="#191b1c"
+            style={styles.icon}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );
