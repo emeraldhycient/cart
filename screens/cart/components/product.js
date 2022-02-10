@@ -1,14 +1,22 @@
-import { Image, StyleSheet, Dimensions, View } from "react-native";
+import {
+  Image,
+  StyleSheet,
+  Dimensions,
+  View,
+  TouchableOpacity,
+} from "react-native";
 import React from "react";
 
 const Product = () => {
   return (
-    <View style={{ padding: 0, margin: 0 }}>
-      <Image
-        source={require("../../../assets/images/shoe2.png")}
-        style={styles.product}
-      />
-    </View>
+    <TouchableOpacity>
+      <View>
+        <Image
+          source={require("../../../assets/images/shoe2.png")}
+          style={styles.product}
+        />
+      </View>
+    </TouchableOpacity>
   );
 };
 
@@ -20,5 +28,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get("window").width,
     left: 0,
     right: 0,
+    margin: 0,
+    padding: 0,
   },
 });
