@@ -140,9 +140,11 @@ const Bottom = () => {
           }}
         >
           <View></View>
-          <Text style={{ fontSize: 14, fontWeight: "700", color: "#6dc2fb" }}>
-            Read more
-          </Text>
+          <TouchableOpacity>
+            <Text style={{ fontSize: 14, fontWeight: "700", color: "#6dc2fb" }}>
+              Read more
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
       {/*  starting description*/}
@@ -207,6 +209,50 @@ const Bottom = () => {
         </View>
       </View>
       {/*  ending varing size */}
+
+      {/*  add to cart button */}
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
+          paddingVertical: 10,
+        }}
+      >
+        <TouchableOpacity>
+          <View style={styles.circle2}>
+            <AntDesign name="heart" color="#c4c4c4" size={30} />
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <View style={styles.btn}>
+            <View
+              style={[
+                styles.circle,
+                {
+                  borderColor: "#1899ff",
+                  borderWidth: 2,
+                  backgroundColor: "#6dc2fb",
+                  marginLeft: 10,
+                },
+              ]}
+            >
+              <AntDesign name="shoppingcart" color="#000" size={25} />
+            </View>
+            <Text
+              style={{
+                fontSize: 18,
+                fontWeight: "600",
+                color: "#fafafa",
+                marginLeft: 20,
+              }}
+            >
+              Add to cart
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+      {/*  add to cart button */}
     </View>
   );
 };
@@ -270,6 +316,27 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 3,
     justifyContent: "center",
+    alignItems: "center",
+  },
+  circle2: {
+    height: 55,
+    width: 55,
+    borderRadius: 100,
+    backgroundColor: "#fafafa",
+    margin: 5,
+    shadowColor: "#171717",
+    shadowOffset: { width: -2, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  btn: {
+    height: 55,
+    width: Dimensions.get("window").width - 140,
+    backgroundColor: "#000",
+    borderRadius: 100,
+    flexDirection: "row",
     alignItems: "center",
   },
 });
