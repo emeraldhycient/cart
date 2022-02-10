@@ -37,7 +37,7 @@ const Bottom = () => {
   };
 
   function currencyFormat(num) {
-    return num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+    return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
   }
 
   useEffect(() => {
@@ -120,7 +120,13 @@ const Bottom = () => {
         <Text style={{ fontSize: 22, fontWeight: "700", marginBottom: 7 }}>
           Description
         </Text>
-        <Text style={{ fontSize: 15, fontWeight: "700" }}>
+        <Text
+          style={{
+            fontSize: 15,
+            fontWeight: "700",
+            lineHeight: 26,
+          }}
+        >
           Discover your style in our all new twinkle mules featuring a brown
           African pattern, leather soles and our very own spinel logo embroiled
           to the feet area.
@@ -139,6 +145,68 @@ const Bottom = () => {
           </Text>
         </View>
       </View>
+      {/*  starting description*/}
+
+      {/*  starting size */}
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
+          marginTop: 13,
+        }}
+      >
+        <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <Text style={{ fontSize: 22, fontWeight: "400", marginRight: 4 }}>
+            Size
+          </Text>
+          <View style={styles.size_circle}>
+            <Text style={{ fontSize: 16, fontWeight: "600" }}>45.5 uk</Text>
+          </View>
+        </View>
+        <Text style={{ fontSize: 23, fontWeight: "400", color: "#c4c4c4" }}>
+          Size guide
+        </Text>
+      </View>
+      {/*  ending size */}
+
+      {/*  starting varing size */}
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "flex-starting",
+          marginBottom: 7,
+          marginTop: 10,
+        }}
+      >
+        <View
+          style={[
+            styles.circle,
+            { borderColor: "#1899ff", borderWidth: 2, backgroundColor: "#000" },
+          ]}
+        >
+          <Text style={{ fontSize: 16, fontWeight: "600", color: "#6dc2fb" }}>
+            45.5
+          </Text>
+        </View>
+        <View style={styles.circle}>
+          <Text style={{ fontSize: 16, fontWeight: "600" }}>40</Text>
+        </View>
+        <View style={styles.circle}>
+          <Text style={{ fontSize: 16, fontWeight: "600" }}>39.5</Text>
+        </View>
+        <View style={styles.circle}>
+          <Text style={{ fontSize: 16, fontWeight: "600" }}>38</Text>
+        </View>
+        <View style={styles.circle}>
+          <Text style={{ fontSize: 16, fontWeight: "600" }}>36</Text>
+        </View>
+        <View style={styles.circle}>
+          <Text style={{ fontSize: 16, fontWeight: "600" }}>32</Text>
+        </View>
+      </View>
+      {/*  ending varing size */}
     </View>
   );
 };
@@ -180,5 +248,28 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-evenly",
+  },
+  size_circle: {
+    borderColor: "#c4c4c4",
+    borderWidth: 1,
+    height: 30,
+    width: 70,
+    padding: 5,
+    borderRadius: 50,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  circle: {
+    height: 39,
+    width: 40,
+    borderRadius: 100,
+    backgroundColor: "#fafafa",
+    margin: 5,
+    shadowColor: "#171717",
+    shadowOffset: { width: -2, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
