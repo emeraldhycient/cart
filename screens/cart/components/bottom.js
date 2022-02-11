@@ -2,8 +2,8 @@ import {
   StyleSheet,
   Text,
   View,
-  Dimensions,
   TouchableOpacity,
+  Dimensions,
   Alert,
 } from "react-native";
 import React, { useEffect, useState } from "react";
@@ -95,12 +95,12 @@ const Bottom = () => {
         }}
       >
         <View style={styles.quantity}>
-          <TouchableOpacity onPress={(e) => incrementQty(4)}>
-            <AntDesign name="plus" size={18} />
-          </TouchableOpacity>
-          <Text>{qty}</Text>
           <TouchableOpacity onPress={(e) => decrementQty(1)}>
             <AntDesign name="minus" size={18} />
+          </TouchableOpacity>
+          <Text>{qty}</Text>
+          <TouchableOpacity onPress={(e) => incrementQty(4)}>
+            <AntDesign name="plus" size={18} />
           </TouchableOpacity>
         </View>
 
@@ -177,7 +177,6 @@ const Bottom = () => {
         style={{
           flexDirection: "row",
           alignItems: "center",
-          justifyContent: "flex-starting",
           marginBottom: 7,
           marginTop: 10,
         }}
@@ -185,7 +184,11 @@ const Bottom = () => {
         <View
           style={[
             styles.circle,
-            { borderColor: "#1899ff", borderWidth: 2, backgroundColor: "#000" },
+            {
+              borderColor: "#1899ff",
+              borderWidth: 2,
+              backgroundColor: "#000",
+            },
           ]}
         >
           <Text style={{ fontSize: 16, fontWeight: "600", color: "#6dc2fb" }}>

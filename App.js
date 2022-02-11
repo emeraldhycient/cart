@@ -1,11 +1,10 @@
-import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, StyleSheet } from "react-native";
 import Cart from "./screens/cart/cart";
+import Bottom from "./screens/cart/components/bottom";
 
 export default function App() {
   return (
-    <SafeAreaView>
+    <>
       <Cart />
-    </SafeAreaView>
+    </>
   );
 }

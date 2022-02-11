@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
+import shoe from "../../../assets/images/shoe2.png";
 
 const Product = () => {
   return (
