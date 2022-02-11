@@ -52,7 +52,7 @@ const Bottom = () => {
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "center",
-          marginBottom: 7,
+          marginBottom: 5,
         }}
       >
         <View
@@ -91,7 +91,7 @@ const Bottom = () => {
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "space-between",
-          marginVertical: 13,
+          marginVertical: 8,
         }}
       >
         <View style={styles.quantity}>
@@ -116,7 +116,7 @@ const Bottom = () => {
 
       {/*  starting description*/}
 
-      <View style={{ marginTop: 10 }}>
+      <View style={{ marginTop: 7 }}>
         <Text style={{ fontSize: 22, fontWeight: "700", marginBottom: 7 }}>
           Description
         </Text>
@@ -136,7 +136,7 @@ const Bottom = () => {
             flexDirection: "row",
             justifyContent: "space-between",
             alignItems: "center",
-            marginVertical: 7,
+            marginVertical: 5,
           }}
         >
           <View></View>
@@ -155,7 +155,7 @@ const Bottom = () => {
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "space-between",
-          marginTop: 13,
+          marginTop: 9,
         }}
       >
         <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -178,7 +178,7 @@ const Bottom = () => {
           flexDirection: "row",
           alignItems: "center",
           marginBottom: 7,
-          marginTop: 10,
+          marginTop: 7,
         }}
       >
         <View
@@ -219,7 +219,6 @@ const Bottom = () => {
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "space-between",
-          paddingVertical: 10,
         }}
       >
         <TouchableOpacity>
